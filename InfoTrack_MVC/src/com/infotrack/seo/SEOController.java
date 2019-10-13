@@ -28,7 +28,7 @@ public class SEOController extends HttpServlet {
 		ArrayList<Integer> indexList = new ArrayList<Integer>();
 		int count=0;
 	    StringBuilder statement = new StringBuilder();
-	    String url = "https://www.google.com.au/search?q="+searchString+"&num=10";
+	    String url = "https://www.google.com.au/search?q="+searchString+"&num=100";
 		System.out.println("URL to search on Browser ---------" + url);
 		
 	   //controller class calling the service methods
