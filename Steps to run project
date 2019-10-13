@@ -1,0 +1,38 @@
+Steps to follow to run the project
+Java JDK Download Link:  https://www.oracle.com/technetwork/java/javase/downloads/index.html  (Java SE 11.0.4 (LTS)) depending upon the OS you are using
+Eclipse IDE Download Link: https://www.eclipse.org/ide/ (This should take JDK bin folder path automatically but if not then set the path)
+Save the project in your local system  (eg: C/D drive)
+Import the existing project in your eclipse
+Step 1:- Open Eclipse.
+Step 2:- Create a new Empty Java Project into the Workspace. (File -> new -> project)
+Step 3:- Select General and then Project.
+Step 4:- Write the project Name.
+Step 5:- Now right click on the source folder and choose import and then general and file system. (Browse the existing project from where it is saved)
+Step 6:- Choose your files or browse your file from the system.
+Step 7:- Add jar file from project -> properties -> java build path -> add external jars -> browse to saved location -> apply and close
+add tomcat server 
+Step 1:download tomcat 7 from https://tomcat.apache.org/download-70.cgi -> Core: ->zip (pgp, sha512) unzip and save it to your local system
+Step 2: In Project Explorer right click -> new -> servers -> select tomcat server 7.0 -> browse to the location where the tomcat installation folder is saved -> finish
+Run the Project
+Step 1: right click on project -> run -> run on server
+
+Note: The data listed directly on google search may vary with the one hit by the application. The URL is displayed as a console log to check directly onto browser.
+
+GitHub Link:
+https://github.com/swetaskoshti/infotrack
+
+
+Project Flow:
+Step 1: On running the project we can go to the browser and type http://localhost:8089/InfoTrack_MVC/ and we will get 2 input boxes
+Step 2: Please enter the input of your choice --- 
+			box 1 will contain the string you want to search on google search engine (eg: online title search) and
+			box 2 - takes the web site url in www.xyz.xyz format.
+Step 3: on submit call the application does some validation check (included in index.jsp page) and on success calls the Controller class(SEOController) which in turn calls the service class (SEOService) where the actual business logic exists.
+
+Business Logic
+Step 1: The function readFromWeb from SEOService class will first hit the browser with the input string from box1 and will get the web page content. This function will store all the url's listed on the page.
+Step 2: The function returnLinks from SEOService class will return the index of the URL mentioned in the input box2.
+Step 3: Depending upon the index list the data will be displayed on the browser. 
+			If the index list has value above 100 or does not exists then the message displayed is "Your Company is not listed in the first 100 search result"
+			If the index list has value between 1-100 then the message displayed is "The Company's Position on Search List is at " and index number.
+			
