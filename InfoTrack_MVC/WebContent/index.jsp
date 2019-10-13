@@ -36,10 +36,7 @@
 <script>
 	function ValidURL() {
 		var url = SEOController.website.value;
-		var regx = new RegExp("^[www]\.[a-z]\.[a-z]\.*$", "i");
-		//var regx = "^[www]\.[a-z]\.[a-z]\.*$";
-		
-		//var regx = "/^(www\.)+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/";
+		var regx = new RegExp("^www\.[a-z]*\.[a-z]*\.[a-z]*$");
         
 		if (!regx.test(url)) { 
 		    alert("Please Enter Valid URL");
