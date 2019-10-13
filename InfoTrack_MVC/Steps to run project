@@ -1,0 +1,19 @@
+Steps to follow to run the project
+Java JDK Download Link:  https://www.oracle.com/technetwork/java/javase/downloads/index.html  (Java SE 11.0.4 (LTS)) depending upon the OS you are using
+Eclipse IDE Download Link: https://www.eclipse.org/ide/ (This should take JDK bin folder path automatically but if not then set the path)
+Save the project in your local system  (eg: C/D drive)
+Import the existing project in your eclipse
+Step 1:- Open Eclipse.
+Step 2:- Create a new Empty Java Project into the Workspace. (File -> new -> project)
+Step 3:- Select General and then Project.
+Step 4:- Write the project Name.
+Step 5:- Now right click on the source folder and choose import and then general and file system. (Browse the existing project from where it is saved)
+Step 6:- Choose your files or browse your file from the system.
+Step 7:- Add jar file from project -> properties -> java build path -> add external jars -> browse to saved location -> apply and close
+add tomcat server 
+Step 1:download tomcat 7 from https://tomcat.apache.org/download-70.cgi -> Core: ->zip (pgp, sha512) unzip and save it to your local system
+Step 2: In Project Explorer right click -> new -> servers -> select tomcat server 7.0 -> browse to the location where the tomcat installation folder is saved -> finish
+Run the Project
+Step 1: right click on project -> run -> run on server
+
+Note: The data listed directly on google search may vary with the one hit by the application. The URL is displayed as a console log to check directly onto browser.
