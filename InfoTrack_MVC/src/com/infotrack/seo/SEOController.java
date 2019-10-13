@@ -27,19 +27,19 @@ public class SEOController extends HttpServlet {
 		
 		ArrayList<Integer> indexList = new ArrayList<Integer>();
 		int count=0;
-	    StringBuilder statement = new StringBuilder();
-	    String url = "https://www.google.com.au/search?q="+searchString+"&num=100";
+	    	StringBuilder statement = new StringBuilder();
+	    	String url = "https://www.google.com.au/search?q="+searchString+"&num=100";
 		System.out.println("URL to search on Browser ---------" + url);
 		
 	   //controller class calling the service methods
 		 SEOService service = new SEOService();
-	     String webContent = service.readFromWeb(url);
-	     indexList = service.returnLinks(webContent,website);
-	     response.setContentType("text/html");
-	     PrintWriter out = response.getWriter();
+	     	String webContent = service.readFromWeb(url);
+	     	indexList = service.returnLinks(webContent,website);
+	     	response.setContentType("text/html");
+	     	PrintWriter out = response.getWriter();
 	     
-	     if(!indexList.isEmpty())
-	     {
+	     	if(!indexList.isEmpty())
+	     	{
 		     for (int index : indexList) {
 					if(index  >= 0 && index <=100) {
 						if(count == 0) {
@@ -58,7 +58,7 @@ public class SEOController extends HttpServlet {
 					}
 		     }
 		     out.println("<h2>");
-			 out.println(statement);
+			out.println(statement);
 	    	 out.println("</h2>");
 		 }
 	     else {
